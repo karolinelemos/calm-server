@@ -35,6 +35,18 @@ module.exports.saveHistory = function(req, res){
   });
 }
 
+module.exports.getProfile = function(req, res){
+  clienteModel.getProfile(req.params.id, function(error, result){
+    res.send(JSON.stringify(result));
+  });
+}
+
+module.exports.saveProfile = function(req, res){
+  clienteModel.saveProfile(req.body, function(error, result){
+    res.send(JSON.stringify(result));
+  });
+}
+
 /* 
 module.exports.show = function(req,res){
   clienteModel.find(req.params.id,function(erro,resultado){

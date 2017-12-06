@@ -19,6 +19,14 @@ module.exports = function(app){
     clienteController.saveHistory(req, res);
   });
 
+  app.get('/api/getProfile/:id', function(req, res){
+    clienteController.getProfile(req, res);
+  });
+
+  app.post('/api/saveProfile', function(req, res){
+    clienteController.saveProfile(req, res);
+  });
+
   /* 
   app.post('/',function(req,res){
     clienteController.store(req,res);

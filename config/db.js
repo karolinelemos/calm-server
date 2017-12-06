@@ -5,7 +5,7 @@ var con = function(){
     host:'localhost',
     user:'root',
     password:'root',
-    database:'calm_app'
+    database:'calm-app'
   });
 };
 
